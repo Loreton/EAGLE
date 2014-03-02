@@ -1,0 +1,7 @@
+1 Create new Symbol
+2. Disegnare i contorni dell'oggetto
+3. Aggiungere i PIN sulle posizioni desiderate (con l'agganncio esterno)
+4. Sui pin andare su properties e mettere:
+    Direction: pwr   (per quelli di alimentazione)
+    Visible:   pad   (nel caso che il nome del pin fosse ingombrante)
+5. Se serve (in caso di visible=pad) aggiungere il nome del pin
