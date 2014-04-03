@@ -145,10 +145,10 @@ package type P</description>
 <pin name="VDD" x="0" y="15.24" visible="pad" length="short" direction="pwr" rot="R270"/>
 <pin name="VSS" x="0" y="-15.24" visible="pad" length="short" direction="pwr" rot="R90"/>
 <pin name="GP0/ICSPDAT" x="-20.32" y="0" length="short"/>
-<pin name="GP1/ICSPCLK" x="-20.32" y="-7.62" length="short"/>
-<pin name="GP2/INT" x="20.32" y="-7.62" length="short" rot="R180"/>
-<pin name="GP5/CLKIN" x="20.32" y="0" length="short" rot="R180"/>
-<pin name="GP4/CLKOUT" x="20.32" y="7.62" length="short" rot="R180"/>
+<pin name="GP1/ICSPCLK" x="20.32" y="7.62" length="short" rot="R180"/>
+<pin name="GP2/INT" x="-20.32" y="-7.62" length="short"/>
+<pin name="GP5/CLKIN" x="20.32" y="-7.62" length="short" rot="R180"/>
+<pin name="GP4/CLKOUT" x="20.32" y="0" length="short" rot="R180"/>
 <pin name="GP3/MCLR/VPP" x="-20.32" y="7.62" length="short"/>
 <text x="-2.54" y="10.16" size="1.778" layer="95">VDD</text>
 <text x="-2.032" y="-11.938" size="1.778" layer="95">Vss</text>

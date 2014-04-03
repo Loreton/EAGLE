@@ -7,16 +7,6 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-40xx.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-74xx-eu.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-RCL.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-ResCap.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-ResCap_New.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-TransDiodi.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-Varie.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-linear.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-supply2.lbr"
-UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-v-reg.lbr"
 UsedLibrary="L:/LNFree/CAD/Eagle-Ln/realApp/Eagle/lbr/19inch.lbr"
 UsedLibrary="L:/LNFree/CAD/Eagle-Ln/realApp/Eagle/lbr/40xx.lbr"
 UsedLibrary="L:/LNFree/CAD/Eagle-Ln/realApp/Eagle/lbr/41xx.lbr"
@@ -350,13 +340,23 @@ UsedLibrary="L:/LNFree/CAD/Eagle-Ln/realApp/Eagle/lbr/xilinx-xc9.lbr"
 UsedLibrary="L:/LNFree/CAD/Eagle-Ln/realApp/Eagle/lbr/xilinx-xcv.lbr"
 UsedLibrary="L:/LNFree/CAD/Eagle-Ln/realApp/Eagle/lbr/zetex.lbr"
 UsedLibrary="L:/LNFree/CAD/Eagle-Ln/realApp/Eagle/lbr/zilog.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-40xx.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-74xx-eu.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-RCL.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-ResCap.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-ResCap_New.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-TransDiodi.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-Varie.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-linear.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-supply2.lbr"
+UsedLibrary="/Loreto/Projects/Eagle/libr_LN/Ln-v-reg.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="332 181 931 580"
+Loc="282 279 1061 678"
 State=2
 Number=0
 
 [Desktop]
-Screen="1280 800"
+Screen="2560 1024"
 Window="Win_1"
