@@ -8315,12 +8315,12 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 <wire x1="-3.81" y1="2.921" x2="-3.81" y2="1.016" width="0.1524" layer="21"/>
 <wire x1="-3.81" y1="-2.921" x2="-3.81" y2="-1.016" width="0.1524" layer="21"/>
 <wire x1="-3.81" y1="1.016" x2="-3.81" y2="-1.016" width="0.1524" layer="21" curve="-180"/>
-<pad name="1" x="-2.54" y="-3.81" drill="0.8128" shape="offset" rot="R270"/>
-<pad name="2" x="0" y="-3.81" drill="0.8128" shape="offset" rot="R270"/>
-<pad name="5" x="0" y="3.81" drill="0.8128" shape="offset" rot="R90"/>
-<pad name="6" x="-2.54" y="3.81" drill="0.8128" shape="offset" rot="R90"/>
-<pad name="3" x="2.54" y="-3.81" drill="0.8128" shape="offset" rot="R270"/>
-<pad name="4" x="2.54" y="3.81" drill="0.8128" shape="offset" rot="R90"/>
+<pad name="1" x="-2.54" y="-3.81" drill="0.8128" diameter="2.032" shape="long" rot="R270"/>
+<pad name="2" x="0" y="-3.81" drill="0.8128" diameter="2.032" shape="long" rot="R270"/>
+<pad name="5" x="0" y="3.81" drill="0.8128" diameter="2.032" shape="long" rot="R90"/>
+<pad name="6" x="-2.54" y="3.81" drill="0.8128" diameter="2.032" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="-3.81" drill="0.8128" diameter="2.032" shape="long" rot="R270"/>
+<pad name="4" x="2.54" y="3.81" drill="0.8128" diameter="2.032" shape="long" rot="R90"/>
 <text x="-2.413" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-4.064" y="-2.921" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
 </package>
@@ -8851,13 +8851,12 @@ Source: www.kingbright.com</description>
 <parts>
 <part name="TILT" library="Ln-Varie" deviceset="PULSANTENO" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="MM1" library="Ln-Varie" deviceset="MAMMUTH03" device=""/>
+<part name="PWR" library="Ln-Varie" deviceset="MAMMUTH03" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="U$2" library="LN-microchip" deviceset="PIC12F635" device=""/>
+<part name="UP1" library="LN-microchip" deviceset="PIC12F635" device=""/>
 <part name="R3" library="rcl" deviceset="R-US_" device="0207/12" value="680"/>
 <part name="LED1" library="Ln-TransDiodi" deviceset="LED" device="5MM"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="Ln-Varie" deviceset="SIP06" device=""/>
 <part name="R2" library="rcl" deviceset="R-US_" device="0207/12" value="4K7"/>
 <part name="R1" library="rcl" deviceset="R-US_" device="0207/12" value="470K"/>
@@ -8869,9 +8868,10 @@ Source: www.kingbright.com</description>
 <part name="R5" library="rcl" deviceset="R-US_" device="0207/12" value="47K"/>
 <part name="D1" library="diode" deviceset="1N4148" device="DO35-10" value="1N4148"/>
 <part name="SUPPLY4" library="Ln-supply2" deviceset="+5V" device=""/>
-<part name="MM2" library="Ln-Varie" deviceset="MAMMUTH03" device=""/>
-<part name="U$3" library="Ln-Varie" deviceset="JUMPER2X1" device=""/>
+<part name="*OCT" library="Ln-Varie" deviceset="MAMMUTH03" device=""/>
+<part name="JLED" library="Ln-Varie" deviceset="JUMPER2X1" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="ALRM" library="Ln-Varie" deviceset="JUMPER2X1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8891,25 +8891,28 @@ Wi-Fi</text>
 servono per ridurre ulteriormente il consumo.
 Con i valori indicati si arriva ad un consumo,
  a riposo, di circa 70uA</text>
-<text x="243.84" y="66.04" size="1.778" layer="97">20uA a riposo</text>
+<text x="243.84" y="60.96" size="1.778" layer="97">20uA a riposo</text>
 <text x="147.32" y="127" size="1.778" layer="97">20uA a vuoto</text>
 <text x="68.58" y="130.81" size="1.778" layer="97">80uA a riposo</text>
+<text x="177.8" y="60.96" size="1.778" layer="97">*OCT serve nel caso 
+dovessi mettere 
+l'accoppiatore ottico 
+lontano dal uP.</text>
 </plain>
 <instances>
-<instance part="TILT" gate="G$1" x="71.12" y="81.28" smashed="yes">
-<attribute name="NAME" x="73.66" y="81.28" size="1.27" layer="95"/>
+<instance part="TILT" gate="G$1" x="83.82" y="78.74" smashed="yes">
+<attribute name="NAME" x="86.36" y="78.74" size="1.27" layer="95"/>
 </instance>
 <instance part="GND4" gate="1" x="137.16" y="76.2"/>
-<instance part="MM1" gate="G$1" x="46.99" y="127"/>
-<instance part="GND5" gate="1" x="55.88" y="107.95"/>
-<instance part="U$2" gate="G$1" x="137.16" y="101.6"/>
-<instance part="R3" gate="G$1" x="165.1" y="83.82" smashed="yes" rot="R270">
-<attribute name="NAME" x="167.64" y="84.8106" size="1.778" layer="95"/>
-<attribute name="VALUE" x="167.513" y="81.153" size="1.778" layer="96"/>
+<instance part="PWR" gate="G$1" x="45.72" y="127"/>
+<instance part="GND5" gate="1" x="55.88" y="104.14"/>
+<instance part="UP1" gate="G$1" x="137.16" y="101.6"/>
+<instance part="R3" gate="G$1" x="165.1" y="73.66" smashed="yes" rot="R270">
+<attribute name="NAME" x="167.64" y="74.6506" size="1.778" layer="95"/>
+<attribute name="VALUE" x="167.513" y="70.993" size="1.778" layer="96"/>
 </instance>
-<instance part="LED1" gate="G$1" x="165.1" y="73.66"/>
-<instance part="GND1" gate="1" x="165.1" y="63.5"/>
-<instance part="GND2" gate="1" x="71.12" y="60.96"/>
+<instance part="LED1" gate="G$1" x="165.1" y="60.96"/>
+<instance part="GND1" gate="1" x="165.1" y="50.8"/>
 <instance part="U$1" gate="G$1" x="71.12" y="160.02" rot="MR180"/>
 <instance part="R2" gate="G$1" x="109.22" y="119.38" smashed="yes" rot="R270">
 <attribute name="NAME" x="107.4674" y="117.856" size="1.778" layer="95" rot="R90"/>
@@ -8919,29 +8922,30 @@ Con i valori indicati si arriva ad un consumo,
 <attribute name="NAME" x="86.106" y="119.3546" size="1.778" layer="95"/>
 <attribute name="VALUE" x="85.725" y="115.697" size="1.778" layer="96"/>
 </instance>
-<instance part="C1" gate="G$1" x="83.82" y="76.2" smashed="yes" rot="R180">
-<attribute name="NAME" x="82.169" y="81.534" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="87.249" y="77.724" size="1.778" layer="96" rot="R90"/>
+<instance part="C1" gate="G$1" x="101.6" y="93.98" smashed="yes" rot="R90">
+<attribute name="NAME" x="106.934" y="95.631" size="1.778" layer="95"/>
+<attribute name="VALUE" x="103.124" y="90.551" size="1.778" layer="96"/>
 </instance>
 <instance part="R4" gate="G$1" x="215.9" y="88.9" smashed="yes" rot="R270">
 <attribute name="NAME" x="218.186" y="89.1286" size="1.778" layer="95"/>
 <attribute name="VALUE" x="217.805" y="85.979" size="1.778" layer="96"/>
 </instance>
 <instance part="OK1" gate="G$1" x="233.68" y="76.2"/>
-<instance part="GND6" gate="1" x="182.88" y="63.5"/>
+<instance part="GND6" gate="1" x="190.5" y="76.2"/>
 <instance part="SUPPLY1" gate="+12V" x="251.46" y="99.06"/>
-<instance part="R5" gate="G$1" x="251.46" y="88.9" smashed="yes" rot="R270">
-<attribute name="NAME" x="253.492" y="91.4146" size="1.778" layer="95"/>
-<attribute name="VALUE" x="253.619" y="85.979" size="1.778" layer="96"/>
+<instance part="R5" gate="G$1" x="246.38" y="86.36" smashed="yes" rot="R270">
+<attribute name="NAME" x="248.412" y="88.8746" size="1.778" layer="95"/>
+<attribute name="VALUE" x="248.539" y="83.439" size="1.778" layer="96"/>
 </instance>
 <instance part="D1" gate="G$1" x="215.9" y="73.66" smashed="yes" rot="R90">
 <attribute name="NAME" x="214.4304" y="76.994" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="206.4316" y="70.406" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY4" gate="+5V" x="109.22" y="137.16"/>
-<instance part="MM2" gate="G$1" x="187.96" y="86.36"/>
-<instance part="U$3" gate="G$1" x="167.64" y="99.06" rot="R180"/>
+<instance part="*OCT" gate="G$1" x="180.34" y="83.82"/>
+<instance part="JLED" gate="G$1" x="167.64" y="86.36" rot="R180"/>
 <instance part="GND3" gate="1" x="83.82" y="60.96"/>
+<instance part="ALRM" gate="G$1" x="261.62" y="78.74" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -8950,14 +8954,21 @@ Con i valori indicati si arriva ad un consumo,
 <segment>
 <pinref part="SUPPLY1" gate="+12V" pin="+12V"/>
 <pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="246.38" y1="91.44" x2="246.38" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="93.98" x2="251.46" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="93.98" x2="251.46" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="93.98" x2="256.54" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="93.98" x2="256.54" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="ALRM" gate="G$1" pin="1"/>
+<wire x1="256.54" y1="78.74" x2="259.08" y2="78.74" width="0.1524" layer="91"/>
+<junction x="251.46" y="93.98"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="165.1" y1="76.2" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="63.5" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="AUXILLARY" class="0">
@@ -8991,9 +9002,13 @@ Con i valori indicati si arriva ad un consumo,
 <label x="102.87" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GP1/ICSPCLK"/>
-<wire x1="157.48" y1="109.22" x2="163.83" y2="109.22" width="0.1524" layer="91"/>
-<label x="163.83" y="109.22" size="1.778" layer="95" xref="yes"/>
+<pinref part="UP1" gate="G$1" pin="GP1/ICSPCLK"/>
+<wire x1="157.48" y1="109.22" x2="165.1" y2="109.22" width="0.1524" layer="91"/>
+<label x="171.45" y="109.22" size="1.778" layer="95" xref="yes"/>
+<pinref part="JLED" gate="G$1" pin="1"/>
+<wire x1="165.1" y1="109.22" x2="171.45" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="109.22" x2="165.1" y2="86.36" width="0.1524" layer="91"/>
+<junction x="165.1" y="109.22"/>
 </segment>
 </net>
 <net name="VSS" class="0">
@@ -9005,21 +9020,14 @@ Con i valori indicati si arriva ad un consumo,
 <label x="88.9" y="158.75" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="52.07" y1="124.46" x2="55.88" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="124.46" x2="55.88" y2="110.49" width="0.1524" layer="91"/>
-<pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="55.88" y1="110.49" x2="55.88" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="MM1" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="VSS"/>
+<pinref part="UP1" gate="G$1" pin="VSS"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="137.16" y1="78.74" x2="137.16" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="165.1" y1="66.04" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="53.34" x2="165.1" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -9040,7 +9048,7 @@ Con i valori indicati si arriva ad un consumo,
 <label x="88.9" y="167.64" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GP3/MCLR/VPP"/>
+<pinref part="UP1" gate="G$1" pin="GP3/MCLR/VPP"/>
 <wire x1="105.41" y1="109.22" x2="109.22" y2="109.22" width="0.1524" layer="91"/>
 <label x="105.41" y="109.22" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R2" gate="G$1" pin="2"/>
@@ -9051,12 +9059,18 @@ Con i valori indicati si arriva ad un consumo,
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="182.88" y1="83.82" x2="182.88" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="MM2" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="83.82" x2="193.04" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="83.82" x2="208.28" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="83.82" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="TILT" gate="G$1" pin="2"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="83.82" y1="76.2" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="50.8" y1="124.46" x2="55.88" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="124.46" x2="55.88" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<pinref part="PWR" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="208.28" y1="78.74" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="66.04" x2="215.9" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="OK1" gate="G$1" pin="C"/>
 <wire x1="215.9" y1="66.04" x2="220.98" y2="66.04" width="0.1524" layer="91"/>
@@ -9065,32 +9079,30 @@ Con i valori indicati si arriva ad un consumo,
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="215.9" y1="71.12" x2="215.9" y2="66.04" width="0.1524" layer="91"/>
 <junction x="215.9" y="66.04"/>
-</segment>
-<segment>
-<pinref part="TILT" gate="G$1" pin="2"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="71.12" y1="78.74" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="83.82" y1="63.5" x2="83.82" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="190.5" y1="78.74" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="78.74" x2="208.28" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="81.28" x2="193.04" y2="81.28" width="0.1524" layer="91" style="shortdash"/>
+<wire x1="193.04" y1="81.28" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
+<junction x="193.04" y="78.74"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="GP5/CLKIN"/>
+<pinref part="UP1" gate="G$1" pin="GP5/CLKIN"/>
 <wire x1="157.48" y1="93.98" x2="165.1" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="93.98" x2="182.88" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="93.98" x2="182.88" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="MM2" gate="G$1" pin="3"/>
-<wire x1="182.88" y1="88.9" x2="193.04" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="88.9" x2="208.28" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="88.9" x2="208.28" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="93.98" x2="208.28" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="93.98" x2="190.5" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="93.98" x2="190.5" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="215.9" y1="96.52" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="93.98" x2="208.28" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="88.9" x2="208.28" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="88.9" x2="193.04" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="88.9" x2="208.28" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="88.9" x2="193.04" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="86.36" x2="182.88" y2="86.36" width="0.1524" layer="91" style="shortdash"/>
+<junction x="193.04" y="88.9"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -9113,21 +9125,29 @@ Con i valori indicati si arriva ad un consumo,
 <segment>
 <pinref part="OK1" gate="G$1" pin="COL"/>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="241.3" y1="76.2" x2="251.46" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="76.2" x2="251.46" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="76.2" x2="246.38" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="76.2" x2="246.38" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TO_ALARM" class="0">
 <segment>
 <pinref part="OK1" gate="G$1" pin="EMI"/>
 <wire x1="241.3" y1="71.12" x2="243.84" y2="71.12" width="0.1524" layer="91"/>
-<label x="259.842" y="71.12" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="261.62" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="243.84" y1="71.12" x2="256.54" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="71.12" x2="256.54" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="76.2" x2="259.08" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="71.12" x2="243.84" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="66.04" x2="245.618" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="245.618" y1="66.04" x2="245.618" y2="65.786" width="0.1524" layer="91"/>
+<junction x="243.84" y="71.12"/>
+<pinref part="ALRM" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="+5V" class="0">
 <segment>
-<wire x1="52.07" y1="129.54" x2="83.82" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="VDD"/>
+<wire x1="50.8" y1="129.54" x2="83.82" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="UP1" gate="G$1" pin="VDD"/>
 <wire x1="83.82" y1="129.54" x2="109.22" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="129.54" x2="137.16" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="129.54" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
@@ -9139,35 +9159,32 @@ Con i valori indicati si arriva ad un consumo,
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="129.54" x2="83.82" y2="124.46" width="0.1524" layer="91"/>
 <junction x="83.82" y="129.54"/>
+<pinref part="PWR" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="TILT" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="83.82" y1="114.3" x2="83.82" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="TILT" gate="G$1" pin="1"/>
+<pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="93.98" x2="83.82" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="83.82" x2="71.12" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GP2/INT"/>
-<wire x1="71.12" y1="93.98" x2="83.82" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="93.98" x2="83.82" y2="93.98" width="0.1524" layer="91"/>
 <junction x="83.82" y="93.98"/>
-<wire x1="83.82" y1="93.98" x2="116.84" y2="93.98" width="0.1524" layer="91"/>
-<label x="71.374" y="94.742" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="GP4/CLKOUT"/>
-<pinref part="U$3" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="101.6" x2="165.1" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="101.6" x2="165.1" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="TILT" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="2"/>
+<pinref part="JLED" gate="G$1" pin="2"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="96.52" x2="165.1" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="83.82" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="UP1" gate="G$1" pin="GP2/INT"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="93.98" x2="116.84" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
